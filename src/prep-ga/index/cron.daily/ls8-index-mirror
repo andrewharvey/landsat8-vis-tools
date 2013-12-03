@@ -1,0 +1,5 @@
+#!/bin/sh
+
+d=`date --date='yesterday' --utc +%F`
+get-metadata-by-day.sh /srv/ftp.ga.gov.au $d
+generate-geojson-index.pl /srv/ftp.ga.gov.au /var/www/data/ga/ls8_index/${d}.json $d

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<!--
+  This file is licenced CC0 http://creativecommons.org/publicdomain/zero/1.0/
+-->
+<head>
+        <title>GA outgoing-emergency-imagery Index</title>
+
+        <!-- support for mobile devices -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+        <!-- stylesheets -->
+        <link rel="stylesheet" href="/javascript/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/javascript/fonts-font-awesome/css/font-awesome.min.css" />
+        <link rel="stylesheet" href="/javascript/leaflet/leaflet.css" />
+        <!--[if lte IE 8]><link rel="stylesheet" href="/javascript/leafelt/leaflet.ie.css" /><![endif]-->
+
+        <link rel="stylesheet" href="app.css" />
+
+        <link rel="stylesheet" href="jQRangeSlider/css/classic.css" />
+
+        <!-- scripts -->
+        <script src="lib/chroma.min.js"></script>
+
+        <script src="/javascript/jquery/jquery.min.js"></script>
+
+        <script src="jQRangeSlider/jquery-ui/js/jquery-ui-1.8.16.custom.min.js"></script>
+        <script src="jQRangeSlider/jQDateRangeSlider-withRuler-min.js"></script>
+
+        <script src="/javascript/bootstrap/js/bootstrap.min.js"></script>
+
+        <script src="/javascript/leaflet/leaflet.js"></script>
+
+        <script src="lib/mustache.js"></script>
+        <script src="lib/moment.min.js"></script>
+        <script src="lib/numeral.min.js"></script>
+
+        <!-- full screen map, no chrome -->
+        <style>
+                /* full screen */
+                body {
+                    padding: 0;
+                    margin: 0;
+                }
+                html, body {
+                    height: 100%;
+                }
+
+                #map {
+                    height: -moz-calc(100% - 22px);
+                    height: -webkit-calc(100% - 22px);
+                    height: calc(100% - 22px);
+                }
+
+                #dateslider {
+                    z-index: 1;
+                }
+
+                .ui-rangeSlider-label, .ui-rangeSlider-label-value {
+                    -moz-transform: scaleY(-1);
+                    -o-transform: scaleY(-1);
+                    -webkit-transform: scaleY(-1);
+                    transform: scaleY(-1);
+                    filter: FlipV;
+                    -ms-filter: "FlipV";
+                }
+        </style>
+</head>
+<body>
+        <div id="dateslider"></div>
+        <div id="map"></div>
+        <script src="app.js"></script>
+        <script src="map.js"></script>
+</body>
+</html>

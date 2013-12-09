@@ -10,7 +10,7 @@
 scene=$1
 output_dir=$2
 
-if [ -z $scene || -z $output_dir ] ; then
+if [ -z $scene ] || [ -z $output_dir ] ; then
     echo "Usage: $0 SCENE_IDENTIFIER <output_directory>"
     exit 1
 fi

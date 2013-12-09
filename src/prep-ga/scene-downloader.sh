@@ -55,6 +55,15 @@ get EODS_metadata.xml
 get GA_Metadata.xml
 get metadata.xml
 
+# get GA's graphic
+get ${scene}_FR.jpg
+get ${scene}.jpg
+
+# and create the .aux.xml file for it
+`dirname "$0"`/generate_jpg_aux.sh $output_dir/EODS_metadata.xml $output_dir/${scene}_FR.jpg
+
+exit
+
 # get scene
 #get scene01.zip
 

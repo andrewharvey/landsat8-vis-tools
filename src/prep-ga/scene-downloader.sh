@@ -79,3 +79,5 @@ cd $output_dir
     md5sum --check md5sum.txt
 
     rm -f scene01.zip
+
+cd ..

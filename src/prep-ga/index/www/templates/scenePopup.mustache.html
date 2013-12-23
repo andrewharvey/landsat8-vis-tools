@@ -1,0 +1,92 @@
+<!--
+Mustache template for the scene popup
+This file is licenced CC0 http://creativecommons.org/publicdomain/zero/1.0/
+-->
+<div class="popup">
+    <h4>{{title}}</h4>
+    <div class="">
+        <table class="table table-condensed table-striped">
+            <tbody>
+                <tr>
+                    <td class="key">Scene ID</td>
+                    <td>{{sceneid}}</td>
+                </tr>
+
+                <tr>
+                    <td class="key">Preview Scene Thumbnail</td>
+                    <td style="text-align: center">
+                        <!--<a href="{{thumb}}" data-lightbox="{{thumb}}" title="{{sceneid}}">
+                            <i class="fa fa-picture-o"></i>
+                        </a>-->
+                        <a href="{{thumb}}" data-lightbox="{{thumb}}" title="{{sceneid}}">
+                            <img width="200px" src="{{thumb}}"/>
+                        </a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="key">Cloud Cover</td>
+                    <td>
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-danger" role="progressbar"
+                                aria-valuenow="{{cloud}}"
+                                aria-valuemin="0" aria-valuemax="100" style="width: {{cloud}}%;">
+                                <span class="sr-only">{{cloud}}%</span>
+                            </div>
+                        </div>
+                        <div class="cloud-percentage">
+                            <span>{{cloud}}%</span>
+                        </div>
+                    </td>
+                </tr>
+
+                <!--
+                <tr>
+                    <td class="key">Path</td>
+                    <td>{{path}}</td>
+                </tr>
+
+                <tr>
+                    <td class="key">Row</td>
+                    <td>{{row}}</td>
+                </tr>
+                -->
+
+                <tr>
+                    <td class="key">Capture Time</td>
+                    <td>{{capture-human-ago}}; {{capture-human}}<br>
+                        <small>({{capture}})</small></td>
+                </tr>
+
+                <tr>
+                    <td class="key">Download Thumbnail</td>
+                    <td>
+                        <a href="{{thumb}}">
+                            <i class="fa fa-download"></i> Thumbnail Preview
+                        </a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="key">Download Preview</td>
+                    <td>
+                        <a href="{{preview}}">
+                            <i class="fa fa-download"></i> Full Resolution
+                            Preview
+                        </a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="key">Download Scene</td>
+                    <td>
+                        <a href="{{lvl1}}">
+                            <i class="fa fa-download"></i> Level 1 Dataset
+                        </a>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+</div>

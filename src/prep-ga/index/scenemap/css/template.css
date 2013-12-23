@@ -1,0 +1,1 @@
+img[src$="{{sceneid}}"] { clip-path: polygon({{polygon-clip-pixel-space}}); }

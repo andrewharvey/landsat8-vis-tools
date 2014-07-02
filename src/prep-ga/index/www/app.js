@@ -344,9 +344,15 @@ function addSceneSet(map, data, date) {
     }
 }
 
+function pad(num, size) {
+    var s = num + "";
+    while (s.length < size) s = "0" + s;
+    return s;
+}
+
 /* format a date object into YYYY-MM-DD */
 function dateToString(date) {
-    return date.getFullYear() + '-' + (date.getMonth() + 1) + '-' + (date.getDate() < 10 ? '0' : '') + date.getDate();;
+    return date.getFullYear() + '-' + pad(date.getMonth() + 1, 2) + '-' + pad(date.getDate(), 2);
 }
 
 /* keep track of which dates we've already put in the download request for */
